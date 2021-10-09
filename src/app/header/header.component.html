@@ -1,0 +1,29 @@
+<div class="header-page">
+  <div class="box-header-logo" routerLink="home">
+      <img src="./../../assets/img/LOGOS/iconLogo.png" class="logo-company-img" alt="logo videoapp">
+    <label class="label-company-video">VideoAPP</label>
+  </div>
+
+  <div class="section-search-video">
+    <div class="box-form-input-search">
+      <input type="text" class="search-video-page" placeholder="Buscar video..."/>
+      <button class="search-btn-video">Buscar</button>
+    </div>
+  </div>
+
+  <div class="box-info-user">
+    <button type="button" class="new-acount-user" data-bs-toggle="modal" data-bs-target="#exampleModalRegister">Crear Cuenta</button>
+    <button type="button" class="login-user-video" data-bs-toggle="modal" data-bs-target="#exampleModalLogin">Iniciar sesion</button>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalRegister" tabindex="-1" aria-labelledby="exampleModalRegister" aria-hidden="true">
+  <app-register></app-register>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLogin" tabindex="-1" aria-labelledby="exampleModalLogin" aria-hidden="true">
+  <app-login></app-login>
+</div>

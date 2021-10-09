@@ -1,0 +1,39 @@
+.box-img-banner {
+  padding: 0%;
+    width: 100%;
+    text-align: center;
+}
+
+.img-banner {
+  padding: 0%;
+    width: 75%;
+}
+
+.form-new-acount {
+  padding-inline-end: 34px;
+    padding-block-start: 18px;
+    width: 100%;
+    font-family: inherit;
+}
+
+.btn-create-acount {
+  padding: 6px;
+  width: 40%;
+  text-align: center;
+  border-radius: 22px;
+  background: red;
+  border: 1px solid red;
+  color: white;
+  font-size: 121%;
+  font-weight: 500;
+  margin-block-start: 29px;
+  align-items: center;
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 146%;
+  font-family: fantasy;
+  text-transform: uppercase;
+}

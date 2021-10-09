@@ -1,0 +1,43 @@
+<div class="modal-dialog modal-dialog-centered modal-xl">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Iniciar sesion</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-6">
+          <div class="box-img-banner">
+            <img src="./../../assets/img/img/3528476.jpg" class="img-banner">
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-new-acount">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="mb-3">
+                <label for="validationCustom01" class="form-label">Correo electronico</label>
+                <input type="email" class="form-control" id="validationCustom01" required>
+                <div id="emailHelp" class="form-text">No compartiremos tu correo con nadie.</div>
+                <div class="invalid-feedback">
+                  Ingresa tu correo electronico.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="validationCustom02" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="validationCustom02" required>
+                <div class="invalid-feedback">
+                  Ingresa tu contraseña.
+                </div>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Mantener la sesion iniciada</label>
+              </div>
+              <button type="submit" class="btn-create-acount" (click)="validateForm()">Ingresar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

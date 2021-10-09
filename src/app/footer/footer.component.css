@@ -1,0 +1,37 @@
+.footer-company {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.box-fit-footer-company {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: black;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  align-items: flex-end;
+  background: ghostwhite;
+  padding: 11px 84px 25px;
+  margin-block-start: 39px;
+}
+
+.col-footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.img-logo-footer {
+  width: 3%;
+  margin: 0;
+  padding: 0;
+  margin-block-start: 18px;
+}

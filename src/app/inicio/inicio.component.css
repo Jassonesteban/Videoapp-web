@@ -1,0 +1,61 @@
+.card-title {
+  margin-bottom: .5rem;
+  color: black;
+  font-size: 119%;
+  font-weight: bold;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 27px;
+  font-size: 97%;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+  color: gray;
+  margin-block-start: 21px;
+  width: 100%;
+  text-align: justify;
+}
+
+.name-canal-upload {
+  padding: 0%;
+  font-size: 100%;
+  margin-block-start: 8px;
+  color: darkred;
+  font-family: fantasy;
+}
+
+.card-footer {
+  padding: .5rem 1rem;
+  background-color: rgba(0, 0, 0, .03);
+  border-top: 1px solid rgba(0, 0, 0, .125);
+  font-size: 100%;
+  text-align: end;
+  font-family: monospace;
+}
+
+.section-home-videos {
+  padding: 1%;
+  width: 100%;
+  margin-block-end: 13px;
+  margin-block-start: 26px;
+}
+
+.box-header-title-one {
+  padding: 0%;
+  width: 100%;
+  margin-block-end: 25px;
+  font-size: 131%;
+  font-family: fantasy;
+  color: gray;
+  text-align: left;
+}
+
+.box-header-title-one label {
+  padding: 0%;
+}

@@ -1,0 +1,109 @@
+.header-page {
+  width: 100%;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 37px 19px;
+  flex-wrap: wrap;
+  background: ghostwhite;
+}
+
+.box-header-logo {
+  padding: 3px;
+  display: inline-flex;
+  width: auto;
+}
+
+.home-company {
+  padding: 4%;
+  background: ghostwhite;
+  border: none;
+  width: auto;
+}
+
+.logo-company-img {
+  padding: 0%;
+  width: 14%;
+  float: left;
+}
+
+.label-company-video {
+  padding: 0%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-inline-start: 14px;
+  font-size: 21px;
+  font-family: fantasy;
+  line-height: normal;
+}
+
+.section-search-video {
+  padding: 0%;
+  width: 44%;
+  display: flex;
+  align-items: center;
+  margin-block-start: 9px;
+}
+
+.box-form-input-search {
+  padding: 0%;
+  width: 98%;
+  display: contents;
+  align-items: center;
+}
+
+.search-video-page {
+  padding: 7px;
+  width: 84%;
+  border: 1px solid gray;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.search-btn-video {
+  padding: 7px;
+  border: 1px solid gray;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: none;
+  width: 102px;
+  background: firebrick;
+  color: white;
+  font-size: 100%;
+  float: right;
+  margin: 0;
+  font-family: fantasy;
+  line-height: 21px;
+}
+
+.box-info-user {
+  padding: 0%;
+  display: flex;
+  justify-content: space-evenly;
+  width: 20%;
+  margin-block-start: 10px;
+}
+
+.new-acount-user {
+  padding: 6px;
+  width: 78%;
+  margin-inline-end: 24px;
+  border-radius: 21px;
+  background: white;
+  border: 2px solid red;
+  font-size: 105%;
+  font-family: fantasy;
+}
+
+.login-user-video {
+  padding: 6px;
+  width: 78%;
+  border-radius: 21px;
+  border: 1px solid red;
+  background: red;
+  color: white;
+  font-family: fantasy;
+  font-size: 105%;
+}

@@ -1,0 +1,249 @@
+.video-js {
+  display: block;
+  vertical-align: top;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #000;
+  position: relative;
+  padding: 0;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 400;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  word-break: initial;
+  width: 100%;
+  margin-block-start: 41px;
+  height: 100%;
+}
+
+.section-video-user {
+  padding: 1%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.box-video-player {
+  padding: 0%;
+  width: 100%;
+  margin-block-end: 25px;
+  margin-inline-start: 15px;
+  float: left;
+}
+
+.box-info-name-video {
+  padding: 1%;
+  width: 100%;
+  color: black;
+  font-size: 172%;
+  font-family: inherit;
+  margin-inline-start: 5px;
+}
+
+.box-info-likes-video {
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  margin-inline-start: 15px;
+  font-size: 119%;
+  color: black;
+  font-weight: 400;
+  font-family: fantasy;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: auto;
+  margin-inline-end: 10px;
+  float: left;
+}
+
+.box-like {
+  padding: 0%;
+  width: 141px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.like-video {
+  padding: 0%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 45%;
+  height: 10%;
+}
+
+.icon-btn-like {
+  padding: 3%;
+  width: 58%;
+}
+
+.box-dislike {
+  padding: 0%;
+  width: 141px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.dislike-video {
+  padding: 0%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 45%;
+  height: 10%;
+}
+
+.icon-btn-dislike {
+  padding: 3%;
+  width: 58%;
+}
+
+.box-date-upload {
+  padding: 0%;
+  width: 29%;
+  float: right;
+  margin-block-start: 9px;
+  display: flex;
+  align-items: flex-end;
+  font-size: 121%;
+  color: gray;
+}
+
+.box-date-upload label {
+  padding: 0%;
+  width: 100%;
+  margin-inline-start: 38%;
+}
+
+.info-canal-user {
+  padding: 6%;
+  width: 90%;
+  margin-inline-start: 53px;
+  margin-block-start: 39px;
+  background: ghostwhite;
+  padding-top: 14px;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
+  border: 1px solid lightgray;
+}
+
+.box-info-video-user {
+  padding: 0%;
+  width: 100%;
+  text-align: justify;
+  font-size: 109%;
+  color: black;
+  border-top: 1px solid gray;
+  padding-top: 16px;
+  margin-block-start: 19px;
+}
+
+.box-info-video-user label {
+  padding: 0%;
+}
+
+.info-canal-user {
+  padding: 0%;
+}
+
+.box-info-canal-user {
+  padding: 3%;
+  width: 100%;
+  display: inline-flex;
+  margin-block-start: 8px;
+}
+
+.box-img-canal {
+  padding: 0%;
+  width: 19%;
+  background: white;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid gray;
+  height: 67px;
+  margin-inline-end: 22px;
+}
+
+.icon-canal {
+  padding: 12%;
+  width: 75%;
+  margin-block-start: 4px;
+}
+
+.box-info-names-canal {
+  padding: 0%;
+  width: 100%;
+  text-align: left;
+}
+
+.label-name-canal {
+  padding: 0%;
+  font-size: 130%;
+  color: black;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.description-canal {
+  padding: 0%;
+  font-size: 94%;
+  color: gray;
+  font-weight: 500;
+}
+
+.box-info-names-canal p {
+  padding: 0%;
+  color: gray;
+  font-size: 102%;
+}
+
+.box-download-video {
+  padding: 6%;
+  width: 90%;
+  margin-inline-start: 53px;
+  margin-block-start: 39px;
+  background: white;
+  padding-top: 14px;
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+  border: 1px solid lightgray;
+}
+
+.box-img-info {
+  padding: 0%;
+  width: 100%;
+  text-align: center;
+}
+
+.img-downloand-video {
+  padding: 0%;
+  width: 73%;
+}
+
+.box-msg-download {
+  padding: 1%;
+  width: 100%;
+  margin-block-end: 20px;
+  font-size: 105%;
+  text-align: center;
+  margin-block-start: 11px;
+}
+
+.box-btn-download {
+  padding: 1%;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-download {
+  padding: 9px;
+  width: 60%;
+  border-radius: 28px;
+  background: darkred;
+  color: white;
+  border: 1px solid darkred;
+  font-size: 106%;
+  font-weight: 500;
+  cursor: pointer;
+}
