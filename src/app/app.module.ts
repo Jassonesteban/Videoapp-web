@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {FormsModule}    from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
@@ -12,7 +12,10 @@ import { VideoComponent } from './video/video.component';
 import { Error404Component } from './error404/error404.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { GetvideosService } from './servicios/getvideos.service';
+import {RouterModule}from '@angular/router';
+import  * as fileSaver from 'file-saver';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +31,14 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    RouterModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    GetvideosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

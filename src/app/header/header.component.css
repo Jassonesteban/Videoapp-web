@@ -107,3 +107,41 @@
   font-family: fantasy;
   font-size: 105%;
 }
+
+.box-form-new-video {
+  padding: 4%;
+  width: 100%;
+  align-items: center;
+  background: ghostwhite;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 109%;
+  color: black;
+}
+
+.title-upload {
+  padding: 0%;
+  font-size: 139%;
+  margin-block-end: 15px;
+  font-family: fantasy;
+}
+
+.next-step-upload {
+  padding: 9px;
+  background: red;
+  color: white;
+  width: 32%;
+  display: inline;
+  float: right;
+  border-radius: 25px;
+  margin-block-start: 16px;
+  font-size: 103%;
+}
+
+#stepTwo {
+  display: none;
+}
+
+#stepOne {
+  display: block;
+}

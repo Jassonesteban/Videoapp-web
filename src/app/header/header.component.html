@@ -1,29 +1,102 @@
 <div class="header-page">
   <div class="box-header-logo" routerLink="home">
-      <img src="./../../assets/img/LOGOS/iconLogo.png" class="logo-company-img" alt="logo videoapp">
+    <img src="./../../assets/img/LOGOS/iconLogo.png" class="logo-company-img" alt="logo videoapp">
     <label class="label-company-video">VideoAPP</label>
   </div>
 
   <div class="section-search-video">
     <div class="box-form-input-search">
-      <input type="text" class="search-video-page" placeholder="Buscar video..."/>
+      <input type="text" class="search-video-page" placeholder="Buscar video..." />
       <button class="search-btn-video">Buscar</button>
     </div>
   </div>
 
-  <div class="box-info-user">
-    <button type="button" class="new-acount-user" data-bs-toggle="modal" data-bs-target="#exampleModalRegister">Crear Cuenta</button>
-    <button type="button" class="login-user-video" data-bs-toggle="modal" data-bs-target="#exampleModalLogin">Iniciar sesion</button>
+  <div class="box-info-user" *ngIf="isLogin !== 'true'">
+    <button type="button" class="new-acount-user" data-bs-toggle="modal" data-bs-target="#exampleModalRegister">Crear
+      Cuenta</button>
+    <button type="button" class="login-user-video" data-bs-toggle="modal" data-bs-target="#exampleModalLogin">Iniciar
+      sesion</button>
+  </div>
+
+  <div class="box-info-user" *ngIf="isLogin === 'true'">
+    <button type="button" class="new-acount-user" data-bs-toggle="modal" data-bs-target="#exampleModalUploadVideo">Subir
+      video</button>
+    <button type="button" class="login-user-video" data-bs-toggle="modal" (click) = "loggedoutsession()">Cerrar sesion</button>
   </div>
 
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalRegister" tabindex="-1" aria-labelledby="exampleModalRegister" aria-hidden="true">
+<div class="modal fade" id="exampleModalRegister" tabindex="-1" aria-labelledby="exampleModalRegister"
+  aria-hidden="true">
   <app-register></app-register>
 </div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModalLogin" tabindex="-1" aria-labelledby="exampleModalLogin" aria-hidden="true">
   <app-login></app-login>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalUploadVideo" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Subir video nuevo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-5">
+            <div class="box-img-upload-video">
+              <img src="./../../assets/img/img/3528476.jpg" class="img-upload-video img-fluid">
+            </div>
+          </div>
+          <div class="col-7">
+            <div class="box-form-new-video" id="stepOne">
+              <label class="title-upload">Información inicial</label>
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-12 position-relative">
+                  <label for="validationTooltip01" class="form-label">Titulo del video</label>
+                  <input type="text" class="form-control" id="validationTooltip01" name="TitleVideo" [(ngModel)]="firstInformation.Nombre" required>
+                  <div class="invalid-tooltip">
+                    Por favor ponle titulo a tu video
+                  </div>
+                </div>
+                <div class="col-md-12 position-relative">
+                  <label for="validationTooltip02" class="form-label">Descripcón o información adicional</label>
+                  <input type="text" class="form-control" id="validationTooltip02" name="DescriptionVideo" [(ngModel)]="firstInformation.Description" required>
+                  <div class="invalid-tooltip">
+                    Por favor describe tu video
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn next-step-upload" type="submit" (click) = "SubirInfoVideo()">Siguiente</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="box-form-new-video" id="stepTwo">
+              <label class="title-upload">Cargar video</label>
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-12 position-relative">
+                  <label for="formFile" class="form-label">Selecciona tu video</label>
+                  <input class="form-control" id="validationTooltip12" type="file" name="VideoFile" id="formFile" accept="video/*" (change)="fileChangeListener($event)">
+                  <div class="invalid-tooltip">
+                    Por favor ponle titulo a tu video
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn next-step-upload" type="submit">Publicar video</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -5,42 +5,16 @@
       <label>Videos recientes</label>
     </div>
     <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
+      <div class="col" *ngFor="let video of listVideos">
         <div class="card h-100">
-          <img src="./../../assets/img/img/4436050.jpg" class="card-img-top" alt="...">
+          <img src="./../../assets/img/img/4436050.jpg" class="card-img-top" alt="Banner video">
           <div class="card-body">
-            <a class="card-title" routerLink="/video/34567">Tutorial de como hacer arroz en 5 minutos</a>
-            <p class="name-canal-upload">Videos locos</p>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <a class="card-title" routerLink="/video/{{video.Vid}}">{{video.Nombre}}</a>
+            <p class="name-canal-upload">{{video.Canal.Nombre}}</p>
+            <p class="card-text">{{video.Description}}</p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Subido el 12 de Oct, 2021</small>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="./../../assets/img/img/4436050.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <a class="card-title">Cantando tusa en el metro</a>
-            <p class="name-canal-upload">VEVO</p>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Subido el 12 de Oct, 2021</small>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100">
-          <img src="./../../assets/img/img/4436050.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <a class="card-title">Explicación capitulo 9 de WHAT IF..</a>
-            <p class="name-canal-upload">Lo inexpicable del streaming</p>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-          </div>
-          <div class="card-footer">
-            <small class="text-muted">Subido el 12 de Oct, 2021</small>
+            <small class="text-muted">{{video.FechaPublicacion}}</small>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetvideosService } from '../servicios/getvideos.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  GetVideos: any = [];
+  listVideos: any = [];
+  NameCanalVideo: any;
 
-  ngOnInit(): void {
+  constructor(private getvideosService: GetvideosService ) { }
+
+  ngOnInit() {
+    this.getVideosHome();
+  }
+
+  private getVideosHome = () => {
+    this.getvideosService.GetAllVideos().subscribe(
+      res => {
+        console.log(res);
+        this.GetVideos = res;
+        this.listVideos = this.GetVideos.videos;
+        console.log(this.listVideos);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 
 }
