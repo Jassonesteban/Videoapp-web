@@ -16,14 +16,27 @@ export class VideoComponent implements OnInit {
   video: any = [];
   canal: any = [];
 
+  pulsado: number = 0;
+
   iLiked: boolean = true;
   iDisliked: boolean = false;
 
   iconLike = "like.png";
   iconDisLike = "dislike.png";
 
-  contLikes: number = 0;
-  contDislikes: number = 0;
+  bodyLikes: any = {
+    ContLikes: 0
+  }
+
+  bodyDislikes: any = {
+    ContDislikes: 0
+  }
+
+  ContLikes: number = 0;
+  ContDislikes: number = 0;
+
+  likesctuales: number;
+  dislikesactuales: number;
 
   constructor(private _route: ActivatedRoute, private getvideosService: GetvideosService) {
 
@@ -42,6 +55,9 @@ export class VideoComponent implements OnInit {
         this.ArrayVideo = res;
         this.video = this.ArrayVideo.video;
         console.log(this.video);
+        this.likesctuales = this.ArrayVideo.video.ContLikes;
+        this.dislikesactuales = this.ArrayVideo.video.ContDislikes;
+        console.log(this.likesctuales);
         this.getInfoCanal(this.ArrayVideo.video.Canal._id);
       },
       err => {
@@ -65,33 +81,58 @@ export class VideoComponent implements OnInit {
   }
 
   public SetLike = () => {
-    this.contLikes = 1;
-    this.contDislikes = 0;
+    this.pulsado++;
+    this.ContLikes = 1;
+    this.ContLikes = this.ContLikes + this.likesctuales;
+    this.bodyLikes.ContLikes = this.ContLikes;
+    this.ContDislikes = 0;
     this.iconLike = "likeme.png";
     this.iconDisLike = "dislike.png";
-    console.log("Me gusta " + this.contLikes + " - No me gusta " + this.contDislikes);
+    console.log("Me gusta " + this.ContLikes + " - No me gusta " + this.ContDislikes);
+
+    if(this.pulsado === 1){
+      this.getvideosService.updateLikesVideo(this.idVideo, this.bodyLikes).subscribe(
+        res => {
+          console.log(res);
+          alert("Te gusto el video");
+          location.reload();
+        },
+        err => {
+          console.log(err);
+        }
+      )
+    } else if(this.pulsado > 1){
+      console.log("Ya le diste me gusta");
+    }
+
   }
 
   public setDislike = () => {
-    this.contLikes = 0;
-    this.contDislikes = 1;
+    this.pulsado++;
+    this.ContLikes = 0;
+    this.ContDislikes = 1;
+    this.ContDislikes = this.ContDislikes + this.dislikesactuales;
     this.iconDisLike = "dislikeme.png";
+    this.bodyDislikes.ContDislikes = this.ContDislikes;
     this.iconLike = "like.png";
-    console.log("No me gusta " + this.contDislikes + " -  Me gusta " + this.contLikes)
+    console.log("No me gusta " + this.ContDislikes + " -  Me gusta " + this.ContLikes);
+
+    if(this.pulsado === 1) {
+      this.getvideosService.updateLikesVideo(this.idVideo, this.bodyDislikes).subscribe(
+        res => {
+          console.log(res);
+          alert("No te gusto el video");
+          location.reload();
+        },
+        err => {
+          console.log(err);
+        }
+      )
+    }else if(this.pulsado > 1){
+      console.log("Ya le diste me gusta");
+    }
   }
 
-  public DownloadVideo = () => {
-    let data: any;
-    var blob = new Blob([data], { type: 'text/csv' });
-    var url = window.URL.createObjectURL(blob);
-    window.open(url);
-  }
-
-  downloadFile(data: any) {
-    var blob = new Blob([data], { type: 'text/csv' });
-    var url = window.URL.createObjectURL(blob);
-    window.open(url);
-  }
 
 
 }

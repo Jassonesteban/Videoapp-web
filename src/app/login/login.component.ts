@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetvideosService } from '../servicios/getvideos.service';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  islogin: string = "false";
+
+  credentialsUser: any = {
+    correo: "",
+    password: ""
+  }
+
+  constructor(private getvideosService: GetvideosService) { }
 
   ngOnInit(): void {
   }
 
-  public validateForm = () => {
+  private validateForm = () => {
     'use strict'
     var forms = document.querySelectorAll('.needs-validation')
 
@@ -27,7 +35,24 @@ export class LoginComponent implements OnInit {
 
           form.classList.add('was-validated')
         }, false)
-      })
+      });
+  }
+
+  public validateLoginUser = () => {
+    this.validateForm();
+    this.getvideosService.validarLogin(this.credentialsUser).subscribe(
+      res => {
+        this.islogin = "true";
+        localStorage.setItem("logged", this.islogin);
+        setTimeout(() => {
+          location.reload();
+        }, 2000);
+        console.log(res);
+      },
+      err => {
+        console.log(err);
+      }
+    )
   }
 
 }

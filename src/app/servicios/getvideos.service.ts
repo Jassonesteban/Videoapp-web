@@ -45,4 +45,12 @@ export class GetvideosService {
   public UploadFileVideo = (id: string, info: any) => {
     return this.http.put(this.URL + "api/uploads/videoFiles/" + id, info);
   }
+
+  public validarLogin = (credentials: string) => {
+    return this.http.post(this.URL + "api/login", credentials);
+  }
+
+  public updateLikesVideo = (id: string, likes: number) => {
+    return this.http.put(this.URL + "api/video/" + id, likes);
+  }
 }

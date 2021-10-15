@@ -16,7 +16,7 @@
             <form class="row g-3 needs-validation" novalidate>
               <div class="mb-3">
                 <label for="validationCustom01" class="form-label">Correo electronico</label>
-                <input type="email" class="form-control" id="validationCustom01" required>
+                <input type="email" [(ngModel)]="credentialsUser.correo" name="EmailUser" class="form-control" id="validationCustom50" required>
                 <div id="emailHelp" class="form-text">No compartiremos tu correo con nadie.</div>
                 <div class="invalid-feedback">
                   Ingresa tu correo electronico.
@@ -24,7 +24,7 @@
               </div>
               <div class="mb-3">
                 <label for="validationCustom02" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="validationCustom02" required>
+                <input type="password" class="form-control" [(ngModel)]="credentialsUser.password" name="passwordUser" id="validationCustom60" required>
                 <div class="invalid-feedback">
                   Ingresa tu contraseña.
                 </div>
@@ -33,7 +33,7 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
                 <label class="form-check-label" for="exampleCheck1">Mantener la sesion iniciada</label>
               </div>
-              <button type="submit" class="btn-create-acount" (click)="validateForm()">Ingresar</button>
+              <button type="submit" class="btn-create-acount" (click)="validateLoginUser()">Ingresar</button>
             </form>
           </div>
         </div>
